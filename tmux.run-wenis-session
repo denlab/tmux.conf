@@ -4,6 +4,8 @@
 tmux new-session  -s wenis-session -n emacs -d
 # go to cljsta dir
 tmux send-keys    -t wenis-session 'cd ~/repo/wapi' C-m
+# fetch last version
+tmux send-keys    -t wenis-session 'git fetch --all' C-m
 # start emacs
 tmux send-keys    -t wenis-session 'emacs -e nrepl-jack-in -e server-mode' C-m
 # create a new window "terms"
